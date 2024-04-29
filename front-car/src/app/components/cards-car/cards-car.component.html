@@ -1,0 +1,39 @@
+<div class="container-geral">
+    <div class="info">
+        <h2>NOSSO ESTOQUE</h2>
+        <p>Encontre veículos premium de alta qualidade e procedência.</p>
+    </div>
+
+    <div *ngIf="!dadosCarregados">
+        <app-loading></app-loading>
+    </div>
+
+    <div *ngIf="dadosCarregados" class="container-cards row row-cols-2 row-cols-lg- g-2 g-lg-3">
+        <div style="max-width: 18rem" *ngFor="let c of carros; index as i">
+            <div class="card-header">
+                <div class="card">
+                    <img class="card-img-top" src="../../../assets/img/car.png" alt="Card image cap">
+
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3 class="title-car">{{c.nome_carro}}</h3>
+                        <p class="ano-modelo">{{c.ano_fabricacao}}</p>
+                    </div>
+
+                    <hr>
+
+                    <ul>
+                        <li>Marca: {{c.marca.nome}}</li>
+                    </ul>
+
+                    <hr>
+                    <div class="alinha-botao">
+                        <button type="button" class="btn  btn-lg btn-block" (click)="selecionarCar(i)">MOSTRAR
+                            DETALHES</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+.container-geral {
+    background-color: #231F20;
+    color: #fff;
+    height: 80%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.container-cards {
+    gap: 5px;
+    padding-left: 30px;
+}
+
+.card-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #444444;
+    width: 250px;
+}
+
+li {
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+li:before {
+    content: '•';
+    display: inline-block;
+    position: absolute;
+    left: -1em;
+    color: #F37F20;
+}
+
+.card-title {
+    padding-left: 10px;
+}
+
+.title-car {
+    padding-bottom: 15px;
+    color: #fff;
+}
+
+.ano-modelo {
+    background-color: #F37F20;
+    border-radius: 5px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    color: black;
+}
+
+.alinha-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #F37F20;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    background-color: #F37F20;
+}

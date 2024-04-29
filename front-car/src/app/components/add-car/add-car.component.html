@@ -1,0 +1,52 @@
+<div class="container-add-car">
+    <form class="dados-form">
+        <div class="info">
+            <h3>Deseja adicionar um novo Carro em nosso estoque?</h3>
+            <p>Preencha todos os campos do formulário para adição de um novo carro</p>
+        </div>
+        <div class="info-form">
+            <div class="text-desc">
+                <h4>Nome:</h4>
+                <input type="text" placeholder="ex: Uno..." name="nome_carro" [(ngModel)]="nome_carro"
+                    class="form-control" required>
+            </div>
+
+            <div class="text-desc">
+                <h4>Ano de Fabricação:</h4>
+                <input type="number" placeholder="ex: 2020..." name="ano_fabricacao" [(ngModel)]="ano_fabricacao"
+                    class="form-control">
+            </div>
+
+            <div class="text-desc">
+                <h4>Ano Modelo:</h4>
+                <input type="number" placeholder="ex: 2020..." name="ano_modelo" [(ngModel)]="ano_modelo"
+                    class="form-control">
+            </div>
+
+            <div class="text-desc">
+                <h4>Modelo:</h4>
+                <input type="text" placeholder="ex: Mobi..." name="modelo_carro" [(ngModel)]="modelo_carro"
+                    class="form-control">
+            </div>
+
+            <div class="text-desc">
+                <h4>Marca:</h4>
+                <input type="text" placeholder="ex: Fiat..." name="marcaNome" [(ngModel)]="marcaNome"
+                    class="form-control">
+            </div>
+
+            <div class="text-desc">
+                <h4>Cores:</h4>
+                <input type="text" placeholder="ex: Prata, Branco, Amarelo..." name="coresString"
+                    [(ngModel)]="coresString" class="form-control">
+            </div>
+            <hr>
+            <div class="dados-btn">
+                <button type="button" class="btn btn-primary btn-lg add-btn" (click)="postCar()">
+                    Adicionar
+                </button>
+                <button type="button" (click)="cancelar()" class="btn btn-secondary btn-lg">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,63 @@
+<div class="container-edit-car">
+    <form *ngIf="carroSelecionado" class="dados-form">
+        <div class="info">
+            <h3>Informações tecnicas</h3>
+            <p>Deseja realizar alguma alteração ou remoção do veiculo?</p>
+        </div>
+        <div class="info-form">
+
+            <div class="text-desc">
+                <h4>Nome:</h4>
+                <input type="text" placeholder="Nome" name="carroSelecionado.nome_carro"
+                    [(ngModel)]="carroSelecionado.nome_carro" [disabled]="!editarCampos" class="form-control">
+            </div>
+
+            <div class="text-desc">
+                <h4>Ano de Fabricação:</h4>
+                <input type="number" placeholder="Ano de Fabricação" name="carroSelecionado.ano_fabricacao"
+                    [(ngModel)]="carroSelecionado.ano_fabricacao" [disabled]="!editarCampos" class="form-control">
+            </div>
+
+            <div class="text-desc">
+                <h4>Ano Modelo:</h4>
+                <input type="number" placeholder="Ano Modelo" name="carroSelecionado.ano_modelo"
+                    [(ngModel)]="carroSelecionado.ano_modelo" [disabled]="!editarCampos" class="form-control">
+            </div>
+
+            <div class="text-desc">
+                <h4>Modelo:</h4>
+                <input type="text" placeholder="Modelo" name="carroSelecionado.modelo_carro"
+                    [(ngModel)]="carroSelecionado.modelo_carro" [disabled]="!editarCampos" class="form-control">
+            </div>
+
+            <div class="text-desc">
+                <h4>Marca:</h4>
+                <input type="text" placeholder="Marca" name="carroSelecionado.marca"
+                    [(ngModel)]="carroSelecionado.marca.nome" [disabled]="!editarCampos" class="form-control">
+            </div>
+
+            <div class="text-desc">
+                <h4>Cores:</h4>
+                <div *ngFor="let cor of carroSelecionado.cores; let i = index">
+                    <input type="text" placeholder="Cores" name="cor{{i}}" [(ngModel)]="carroSelecionado.cores[i].cor"
+                        [disabled]="!editarCampos" class="form-control">
+                </div>
+            </div>
+
+            <div class="dados-btn">
+                <input type="button" value="Alterar" id="alterarBtn" (click)="editCar()"
+                    class="btn btn-primary btn-lg edit-btn" [disabled]="
+                    carroSelecionado.nome_carro === '' ||
+                    carroSelecionado.ano_fabricacao <= 1000 ||
+                    carroSelecionado.ano_modelo <= 1000 ||
+                    carroSelecionado.modelo_carro === '' ||
+                    carroSelecionado.marca.nome === ''
+                    ">
+                <input type="button" value="Remover" id="removeBtn" (click)="deleteCar()"
+                    class="btn btn-primary btn-lg delete-btn">
+                <input type="button" value="Cancelar" (click)="cancelar()" class="btn btn-secondary btn-lg">
+            </div>
+        </div>
+    </form>
+
+</div>

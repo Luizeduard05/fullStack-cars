@@ -1,0 +1,50 @@
+.container-add-car {
+    background-color: #444;
+    height: 80%;
+}
+
+.dados-form {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #333333;
+    padding: 30px;
+}
+
+.info {
+    background-color: #F37F20;
+}
+
+.info-form {
+    padding: 15px;
+}
+
+.info h3,
+p {
+    color: #fff;
+}
+
+.text-desc h4 {
+    display: flex;
+    text-align: left;
+}
+
+.info-form input {
+    margin-bottom: 10px;
+    border-radius: 0px;
+}
+
+.dados-btn {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.add-btn {
+    background-color: #F37F20;
+    border: none;
+}
+
+form {
+    margin: 30px auto;
+    text-align: center;
+}
